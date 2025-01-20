@@ -1,5 +1,5 @@
 use candid::CandidType;
-use ic_cdk::{init, query, storage, update};
+use ic_cdk::{export_candid,init, query, storage, update};
 use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
 
@@ -69,3 +69,6 @@ fn total_supply() -> u64 {
     let ledger = load_ledger();
     ledger.total_supply
 }
+
+
+export_candid!();
